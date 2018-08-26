@@ -1,0 +1,35 @@
+<view class='container'>
+  <view class="top">
+    <image class='top-arrow' src='/images/icon/white-arrow.png'></image>
+    <text class='top-back'>返回</text>
+    <text class='top-title'>客户详情</text>
+  </view>
+  <view class='client'>
+    <image class='client-avatar' src='/images/avatar/avatar1.png'></image>
+    <view class='client-data'>
+      <text class="client-word">陈先生</text>
+      <text class="client-word">13689893434</text>
+    </view>
+    <image class='client-call' src='/images/icon/call.png'></image>
+  </view>
+  <view class='infos' hover-class='news-hover'>
+    <view class='info border' hover-class='info-hover'>
+      <text class='info-title'>单位</text>
+      <text class='info-word'>哈哈哈未来科技公司</text>
+    </view>
+    <view class='info' hover-class='info-hover'>
+      <text class='info-title'>地址</text>
+      <text class='info-word'>渝北区xx路233号</text>
+    </view>
+  </view>
+  <view class='infos' hover-class='news-hover'>
+    <view class='info border' hover-class='info-hover'>
+      <text class='info-title'>身份证</text>
+      <text class='info-word'>190328274438498361</text>
+    </view>
+    <view class='info' hover-class='info-hover'>
+      <text class='info-title'>邮箱</text>
+      <text class='info-word'>47384738@qq.com</text>
+    </view>
+  </view>
+</view>

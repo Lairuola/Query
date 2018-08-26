@@ -1,9 +1,12 @@
 {
-    "pages": [
-        "pages/profile/profile",
-        "pages/welcome/welcome"
-    ],
-    "window": {
-        "navigationStyle": "custom"
-    }
+  "pages": [
+    "pages/detail/detail",
+    "pages/client/client",
+    "pages/client/client-detail/client-detail",
+    "pages/profile/profile",    
+    "pages/welcome/welcome"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  }
 }

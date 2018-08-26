@@ -9,19 +9,29 @@
         </view>
     </view>
     <view class='news'>
-        <view class='news-top'>
+        <view class='news-top' hover-class='news-hover'>
             <image class='blue-pic' src='/images/profile/blue.png'></image>
             <text class='blue-word'>最新消息</text>
             <text class='more'>更多</text>
             <image class="arrow" src='/images/profile/arrow.png'></image>
         </view>
-        <view>
-            <text class='title'>我是标题</text>
-            <text class='word'>2018-08-21</text>
+        <view class='new border' hover-class='news-hover'>
+            <text class='news-title'>我是标题</text>
+            <text class='news-word'>2018-08-21</text>
+        </view>
+        <view class='new' hover-class='news-hover'>
+            <text class='news-title'>我是标题</text>
+            <text class='news-word'>2018-08-21</text>
         </view>
     </view>
-    <view>
-        <view></view>
-        <view></view>
+    <view class='manage'>
+        <view class='manage-wrap'>
+          <image class='manage-pic' src='/images/profile/form.png'></image>
+          <image class='manage-pic hold' src='/images/profile/client.png'></image>
+        </view>
+         <view class='manage-wrap'>
+          <image class='manage-pic' src='/images/profile/info.png'></image>
+          <image class='manage-pic hold' src='/images/profile/manage.png'></image>
+        </view>
     </view>
 </view>
