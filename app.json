@@ -1,12 +1,15 @@
 {
   "pages": [
-    "pages/detail/detail",
-    "pages/client/client",
+      "pages/table/table",
+    "pages/table/table-detail/table-detail",
+    "pages/manage/manage",
     "pages/client/client-detail/client-detail",
-    "pages/profile/profile",    
-    "pages/welcome/welcome"
+    "pages/client/client",
+    "pages/profile/profile",
+    
+    "pages/test/test"
   ],
   "window": {
-    "navigationStyle": "custom"
+    "navigationStyle": "default"
   }
 }

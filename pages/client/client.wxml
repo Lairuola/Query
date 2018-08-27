@@ -1,35 +1,39 @@
 <view class='container'>
-  <view class="top">
-    <image class='top-arrow' src='/images/icon/white-arrow.png'></image>
-    <text class='top-back'>返回</text>
-    <text class='top-title'>我的客户</text>
-  </view>
-  <view class='client-bg'>
-    <image class='client-avatar' src='/images/avatar/avatar1.png'></image>
-    <view class='client-data'>
-      <text class="client-word">陈先生</text>
-      <text class="client-word">13689893434</text>
+  <scroll-view scroll-y='true' style="height:1200rpx;" bindscrolltolower='lower'>
+    <view class='client-bg'>
+      <image class='client-avatar' src='/images/avatar/avatar1.png'></image>
+      <view class='client-data'>
+        <text class="client-word">陈先生1</text>
+        <text class="client-word">13689893434</text>
+      </view>
     </view>
-  </view>
-  <view class='client-bg'>
-    <image class='client-avatar' src='/images/avatar/avatar1.png'></image>
-    <view class='client-data'>
-      <text class="client-word">陈先生</text>
-      <text class="client-word">13689893434</text>
+    <view class='client-bg'>
+      <image class='client-avatar' src='/images/avatar/avatar1.png'></image>
+      <view class='client-data'>
+        <text class="client-word">陈先生2</text>
+        <text class="client-word">13689893434</text>
+      </view>
     </view>
-  </view>
-  <view class='client-bg'>
-    <image class='client-avatar' src='/images/avatar/avatar1.png'></image>
-    <view class='client-data'>
-      <text class="client-word">陈先生</text>
-      <text class="client-word">13689893434</text>
+    <view class='client-bg'>
+      <image class='client-avatar' src='/images/avatar/avatar1.png'></image>
+      <view class='client-data'>
+        <text class="client-word">陈先生3</text>
+        <text class="client-word">13689893434</text>
+      </view>
     </view>
-  </view>
-  <view class='client-bg'>
-    <image class='client-avatar' src='/images/avatar/avatar1.png'></image>
-    <view class='client-data'>
-      <text class="client-word">陈先生</text>
-      <text class="client-word">13689893434</text>
+    <view class='client-bg'>
+      <image class='client-avatar' src='/images/avatar/avatar1.png'></image>
+      <view class='client-data'>
+        <text class="client-word">陈先生4</text>
+        <text class="client-word">13689893434</text>
+      </view>
     </view>
-  </view>
+    <view class='client-bg'>
+      <image class='client-avatar' src='/images/avatar/avatar1.png'></image>
+      <view class='client-data'>
+        <text class="client-word">陈先生5</text>
+        <text class="client-word">13689893434</text>
+      </view>
+    </view>
+  </scroll-view>
 </view>

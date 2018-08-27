@@ -1,0 +1,119 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <!-- 顶部导航栏 -->
+      <view class="weui-navbar">
+        <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <!-- 内容 -->
+      <view class="weui-tab__panel">
+        <scroll-view scroll-y='true' style="height:100%" class="weui-tab__content" bindscrolltolower='lower' hidden="{{activeIndex != 0}}">
+          <view class="weui-flex form-bg">
+            <view class="form-word">
+              <text class="form-title">这是表单标题</text>
+              <text class="form-time">2018-08-21</text>
+              <text>3</text>
+              <text>次/</text>
+              <text>10</text>
+              <text>次</text>
+            </view>
+            <view class="weui-flex__item"></view>
+            <view class="form-btn-group">
+              <view class="form-btn">已填详情</view>
+              <view class="form-btn">填写表格</view>
+            </view>
+          </view>
+          <view class="weui-flex form-bg">
+            <view class="form-word">
+              <text class="form-title">这是表单标题</text>
+              <text class="form-time">2018-08-21</text>
+              <text class="form-success">已完成</text>
+            </view>
+            <view class="weui-flex__item"></view>
+            <view class="form-btn-group">
+              <view class="form-btn">已填详情</view>
+              <view class="form-btn">填写表格</view>
+            </view>
+          </view>
+          <view class="weui-flex form-bg">
+            <view class="form-word">
+              <text class="form-title">这是表单标题</text>
+              <text class="form-time">2018-08-21</text>
+              <text class="form-success">已完成</text>
+            </view>
+            <view class="weui-flex__item"></view>
+            <view class="form-btn-group">
+              <view class="form-btn">已填详情</view>
+              <view class="form-btn">填写表格</view>
+            </view>
+          </view>
+          <view class="weui-flex form-bg">
+            <view class="form-word">
+              <text class="form-title">这是表单标题</text>
+              <text class="form-time">2018-08-21</text>
+              <text class="form-success">已完成</text>
+            </view>
+            <view class="weui-flex__item"></view>
+            <view class="form-btn-group">
+              <view class="form-btn">已填详情</view>
+              <view class="form-btn">填写表格</view>
+            </view>
+          </view>
+          <view class="weui-flex form-bg">
+            <view class="form-word">
+              <text class="form-title">这是表单标题</text>
+              <text class="form-time">2018-08-21</text>
+              <text>3</text>
+              <text>次/</text>
+              <text>10</text>
+              <text>次</text>
+            </view>
+            <view class="weui-flex__item"></view>
+            <view class="form-btn-group">
+              <view class="form-btn">已填详情</view>
+              <view class="form-btn">填写表格</view>
+            </view>
+          </view>
+          <view class="weui-flex form-bg">
+            <view class="form-word">
+              <text class="form-title">这是表单标题</text>
+              <text class="form-time">2018-08-21</text>
+              <text>3</text>
+              <text>次/</text>
+              <text>10</text>
+              <text>次</text>
+            </view>
+            <view class="weui-flex__item"></view>
+            <view class="form-btn-group">
+              <view class="form-btn">已填详情</view>
+              <view class="form-btn">填写表格</view>
+            </view>
+          </view>
+          <view class="weui-flex form-bg">
+            <view class="form-word">
+              <text class="form-title">这是表单标题</text>
+              <text class="form-time">2018-08-21</text>
+              <text>3</text>
+              <text>次/</text>
+              <text>10</text>
+              <text>次</text>
+            </view>
+            <view class="weui-flex__item"></view>
+            <view class="form-btn-group">
+              <view class="form-btn">已填详情</view>
+              <view class="form-btn">填写表格</view>
+            </view>
+          </view>
+        </scroll-view>
+        <scroll-view scroll-y='true' class="weui-tab__content" bindscrolltolower='lower' hidden="{{activeIndex != 1}}"></scroll-view>
+        <scroll-view scroll-y='true' class="weui-tab__content" bindscrolltolower='lower' hidden="{{activeIndex != 2}}"></scroll-view>
+        <scroll-view scroll-y='true' class="weui-tab__content" bindscrolltolower='lower' hidden="{{activeIndex != 3}}"></scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,50 @@
+page,
+.page,
+.page__bd {
+    height: 100%;
+}
+
+.page__bd {
+    padding-bottom: 0;
+}
+
+.manage-bg {
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 1px 2px 2px 2px #ccc;
+    margin-top: 40rpx;
+    margin-left: 5%;
+    padding: 20rpx 0;
+}
+
+.user-avatar {
+    width: 130rpx;
+    height: 130rpx;
+    margin-left: 20rpx;
+}
+
+.manage-word{
+    margin-top: 14rpx;
+    margin-left: 20rpx;
+    font-size: .875rem;
+}
+
+.user-score{
+    color: #739df4;
+    font-size: .75rem;
+}
+
+.manage-btn{
+    background-color: #739df4;
+    text-align: center;
+    padding: 4rpx 40rpx;
+    border-radius: 6px;
+    color: #fff;
+    margin-top: 12rpx;
+    margin-left: 80rpx;
+    font-size: .75rem;
+}
+
+.manage-btn-cancel{
+    background-color: #f1f1f1;
+}

@@ -1,9 +1,4 @@
 <view class='container'>
-  <view class="top">
-    <image class='top-arrow' src='/images/icon/white-arrow.png'></image>
-    <text class='top-back'>返回</text>
-    <text class='top-title'>客户详情</text>
-  </view>
   <view class='client'>
     <image class='client-avatar' src='/images/avatar/avatar1.png'></image>
     <view class='client-data'>

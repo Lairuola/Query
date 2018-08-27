@@ -1,0 +1,38 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <!-- 顶部导航栏 -->
+            <view class="weui-navbar">
+                <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <!-- 内容 -->
+            <view class="weui-tab__panel">
+                <scroll-view scroll-y='true' style="height:100%" class="weui-tab__content" bindscrolltolower='lower' hidden="{{activeIndex != 0}}">
+                    <view class="weui-flex manage-bg">
+                        <image class="user-avatar" src="/images/avatar/avatar1.png"></image>
+                        <view class="manage-word">
+                            <text class="user-name">陈先生</text>
+                            <view class="user-score">
+                                <text>本月</text>
+                                <text>80</text>
+                                <text>分/全部</text>
+                                <text>160</text>
+                                <text>分</text>
+                            </view>
+                        </view>
+                        <view class="manage-btn-group">
+                            <view class="manage-btn" catch:tap="btnHover">停用</view>
+                            <view class="manage-btn">详情</view>
+                        </view>
+                    </view>
+                </scroll-view>
+                <scroll-view scroll-y='true' class="weui-tab__content" bindscrolltolower='lower' hidden="{{activeIndex != 1}}"></scroll-view>
+            </view>
+        </view>
+    </view>
+</view>

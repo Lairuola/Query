@@ -1,0 +1,46 @@
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+
+.form-bg{
+    background-color:#fff;
+    font-size: .75rem;
+    padding: 20rpx 30rpx;
+    margin-top:20rpx;
+}
+
+.form-word{
+    width: 34%;
+}
+
+.form-title{
+    font-size: .875rem;
+    color: #739df4;
+    display: block;
+}
+
+.form-time{
+    display: block;
+}
+
+.form-success{
+    color:  #739df4;
+}
+
+.form-btn-group{
+    width: 22%
+}
+
+.form-btn{
+    background-color: #739df4;
+    text-align: center;
+    padding: 5rpx 10rpx;
+    border-radius: 6px;
+    color: #fff;
+    margin-top: 12rpx;
+}
