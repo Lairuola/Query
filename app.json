@@ -1,15 +1,17 @@
 {
-  "pages": [
-      "pages/table/table",
-    "pages/table/table-detail/table-detail",
-    "pages/manage/manage",
-    "pages/client/client-detail/client-detail",
-    "pages/client/client",
-    "pages/profile/profile",
-    
-    "pages/test/test"
-  ],
-  "window": {
-    "navigationStyle": "default"
-  }
+    "pages": [
+        "pages/tip/tip",
+        "pages/profile/profile",
+        "pages/manage/manage",
+        "pages/chart/chart",
+        "pages/table/table",
+        "pages/table/table-detail/table-detail",
+        "pages/client/client",
+        "pages/client/client-detail/client-detail",
+        "pages/form/form",
+        "pages/test/test"
+    ],
+    "window": {
+        "navigationStyle": "default"
+    }
 }

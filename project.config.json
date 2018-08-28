@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -44,7 +44,50 @@
 				{
 					"id": -1,
 					"name": "table",
-					"pathName": "pages/table/table"
+					"pathName": "pages/table/table",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "tip",
+					"pathName": "pages/tip/tip",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "manage",
+					"pathName": "pages/manage/manage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "table-detail",
+					"pathName": "pages/table/table-detail/table-detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "client",
+					"pathName": "pages/client/client",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "client-detail",
+					"pathName": "pages/client/client-detail/client-detail",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "chart",
+					"pathName": "pages/chart/chart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "form",
+					"pathName": "pages/form/form",
+					"query": ""
 				}
 			]
 		}

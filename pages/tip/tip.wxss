@@ -1,0 +1,15 @@
+
+.tip-pic{
+    width: 224rpx;
+    height: 260rpx;
+}
+
+.box{
+    width: 100%;
+    text-align: center;
+    margin-top: 300rpx;
+}
+
+text{
+    display: block;
+}

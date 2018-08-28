@@ -1,0 +1,63 @@
+<view class='container'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="section-input">
+            <view class='form-name'>输入框</view>
+            <input class='form-input' name="input" placeholder="请输入您的姓名" />
+        </view>
+        <view class="section-radio">
+            <view class="radio-name">单选框</view>
+            <radio-group name="radio-group">
+                <label><radio value="radio1"/>radio1</label>
+                <label><radio value="radio2"/>radio2</label>
+            </radio-group>
+        </view>
+        <view class="section-checkbox">
+            <view class="checkbox-name">复选框</view>
+            <checkbox-group name="checkbox" style="width:62%;padding-left:27%;">
+                <label><checkbox value="checkbox1"/>选项1</label>
+                <label><checkbox value="checkbox2"/>选项2</label>
+                <label><checkbox value="checkbox3"/>选项3</label>
+                <label><checkbox value="checkbox4"/>选项4</label>
+                <label><checkbox value="checkbox5"/>选项5</label>
+            </checkbox-group>
+        </view>
+        <view class="section-pick">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker">
+                    <text class='pick-name'>单个选择器</text>
+                    <text class="pick-select">{{array[index]}}</text>
+                </view>
+            </picker>
+        </view>
+        <view class="section-pick">
+            <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+                <view class="picker">
+                    <text class='pick-name'>多个选择器</text>
+                    <text class="mulpick-select">{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}</text>
+                </view>
+            </picker>
+        </view>
+        <view class="section-pick">
+            <picker mode="date" value="{{date}}" value="2018-08-28" bindchange="bindDateChange">
+                <view class="picker">
+                    <text class='pick-name'>日期选择器</text>
+                    <text class="date-select">{{date}}</text>
+                </view>
+            </picker>
+        </view>
+        <view class="section-pick">
+            <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+                <view class="picker">
+                <text class='pick-name'>城市选择器</text>
+                <text class="city-select">{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+                </view>
+            </picker>
+        </view>
+        <view class="section-pick">
+            <text class="pick-name">文本框</text>
+            <view class="textarea-wrp">
+            <textarea bindblur="bindTextAreaBlur" auto-height />
+            </view>
+        </view>
+    </form>
+</view>

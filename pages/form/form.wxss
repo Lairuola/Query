@@ -1,0 +1,113 @@
+form {
+    width: 100%;
+}
+
+.section-input {
+    width: 100%;
+    padding: 30rpx;
+}
+
+.form-name {
+    width: 200rpx;
+    color: #739df4;
+    float: left;
+    font-size: .875rem;
+    text-align: center;
+    margin-right: 20rpx;
+    margin-top: 10rpx;
+    vertical-align: middle;
+}
+
+.form-input {
+    width: 64%;
+    height: 70rpx;
+    font-size: .875rem;
+    line-height: 70rpx;
+    display: block;
+    border: 1px solid #739df4;
+    border-radius: 6px;
+    background-color: #f5f5f5;
+}
+
+.section-radio {
+    width: 100%;
+    padding: 30rpx;
+}
+
+.radio-name {
+    width: 200rpx;
+    color: #739df4;
+    float: left;
+    font-size: .875rem;
+    text-align: center;
+    margin-right: 20rpx;
+}
+
+.section-checkbox {
+    width: 100%;
+    padding: 30rpx;
+}
+
+.checkbox-name {
+    width: 200rpx;
+    color: #739df4;
+    float: left;
+    font-size: .875rem;
+    text-align: center;
+    /* margin-right: 20rpx; */
+}
+
+label {
+    margin-left: 15rpx;
+}
+
+.section-pick {
+    width: 100%;
+    padding: 30rpx;
+}
+
+.pick-name {
+    width: 200rpx;
+    color: #739df4;
+    float: left;
+    font-size: .875rem;
+    text-align: center;
+    /* vertical-align: middle; */
+}
+
+.pick-select {
+    border: 1px solid #739df4;
+    height: 50rpx;
+    display: block;
+    margin-left: 220rpx;
+    width: 260rpx;
+    text-align: center;
+    border-radius: 6px;
+}
+.mulpick-select{
+    border: 1px solid #739df4;
+    height: 50rpx;
+    display: block;
+    margin-left: 220rpx;
+    width: 460rpx;
+    text-align: center;
+    border-radius: 6px;
+}
+.date-select{
+    border: 1px solid #739df4;
+    height: 50rpx;
+    display: block;
+    margin-left: 220rpx;
+    width: 360rpx;
+    text-align: center;
+    border-radius: 6px;
+}
+.city-select{
+    border: 1px solid #739df4;
+    height: 50rpx;
+    display: block;
+    margin-left: 220rpx;
+    width: 400rpx;
+    text-align: center;
+    border-radius: 6px;
+}

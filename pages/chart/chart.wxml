@@ -1,0 +1,65 @@
+<view class="container">
+    <view class="chart-banner">
+        <view class="banner-wrap">
+            <image class="user-avatar" src="/images/avatar/avatar1.png"></image>
+            <view class="user-word">
+                <text class="user-name">陈先生</text>
+                <text>个体统计表</text>
+            </view>
+        </view>
+    </view>
+    <view class="chart-bg">
+        <view class="chart">
+            <view class="chart-top">
+                <text class="chart-name">个体</text>
+                <text>排名:</text>
+                <text>251</text>
+                <text>名</text>
+            </view>
+            <view class="chart-wrap">
+                <view class="chart-pic">
+                    <canvas canvas-id="typeA" class="chart-cir" bindtouchstart="touchHandler"></canvas>
+                </view>
+            </view>
+        </view>
+        <view class="chart">
+            <view class="chart-top">
+                <text class="chart-name">商户</text>
+                <text>排名:</text>
+                <text>25</text>
+                <text>名</text>
+            </view>
+            <view class="chart-wrap">
+                <view class="chart-pic">
+                    <canvas canvas-id="typeB" class="chart-cir" bindtouchstart="touchHandler"></canvas>
+                </view>
+            </view>
+        </view>
+        <view class="chart">
+            <view class="chart-top">
+                <text class="chart-name">内部</text>
+                <text>排名:</text>
+                <text>251</text>
+                <text>名</text>
+            </view>
+            <view class="chart-wrap">
+                <view class="chart-pic">
+                    <canvas canvas-id="typeC" class="chart-cir" bindtouchstart="touchHandler"></canvas>
+                </view>
+            </view>
+        </view>
+        <view class="chart">
+            <view class="chart-top">
+                <text class="chart-name">外拓</text>
+                <text>排名:</text>
+                <text>251</text>
+                <text>名</text>
+            </view>
+            <view class="chart-wrap">
+                <view class="chart-pic">
+                    <canvas canvas-id="typeD" class="chart-cir" bindtouchstart="touchHandler"></canvas>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

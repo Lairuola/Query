@@ -1,0 +1,73 @@
+.chart-banner {
+    width: 100%;
+    height: 280rpx;
+    background-color: #739df4;
+}
+
+.banner-wrap {
+    width: 100%;
+    text-align: center;
+    margin-top: 40rpx;
+}
+
+.user-avatar {
+    width: 130rpx;
+    height: 130rpx;
+}
+
+.user-word {
+    color: #fff;
+}
+
+.chart-bg {
+    font-size: 0.875rem;
+    flex-direction: row;
+    width: 100%;
+}
+
+.chart {
+    width: 320rpx;
+    height: 410rpx;
+    margin-top: 40rpx;
+    margin-left: 40rpx;
+    float: left;
+    background-color: #fff;
+}
+
+.chart-top {
+    background-color: #739df4;
+    padding: 20rpx 20rpx;
+    color: #fff;
+    font-size: 0.75rem;
+    border-top-left-radius: 12rpx;
+    border-top-right-radius: 12rpx;
+}
+
+.chart-name {
+    font-size: 0.875rem;
+    margin-right: 70rpx;
+}
+
+.chart-wrap {
+    width: 100%;
+}
+
+.chart-pic {
+    width: 100%;
+}
+
+.chart-cir {
+    width: 300rpx;
+    height: 300rpx;
+    display: block;
+    margin: 0 auto;
+}
+
+.chart-progress {
+    font-size: 0.875rem;
+}
+
+.chart-progress text {
+    margin-left: 20rpx;
+    margin-right: 20rpx;
+}
