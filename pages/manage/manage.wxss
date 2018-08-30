@@ -48,3 +48,27 @@ page,
 .manage-btn-cancel{
     background-color: #f1f1f1;
 }
+
+.qrcode{
+    width: 110rpx;
+    height: 110rpx;
+}
+
+.qr-container{
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    color: #739df4;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+}
+
+.qr-tip{
+    position: absolute;
+    bottom: 179rpx;
+    left: 227rpx;
+    width: 313rpx;
+    height: 307rpx;
+    z-index: 2;
+    /* display: none; */
+}

@@ -11,8 +11,9 @@
                 <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
             </view>
             <!-- 内容 -->
-            <view class="weui-tab__panel">
+            <view class="weui-tab__panel" style='height:84%'>
                 <scroll-view scroll-y='true' style="height:100%" class="weui-tab__content" bindscrolltolower='lower' hidden="{{activeIndex != 0}}">
+
                     <view class="weui-flex manage-bg">
                         <image class="user-avatar" src="/images/avatar/avatar1.png"></image>
                         <view class="manage-word">
@@ -26,12 +27,19 @@
                             </view>
                         </view>
                         <view class="manage-btn-group">
-                            <view class="manage-btn" catch:tap="btnHover">停用</view>
+                            <view class="manage-btn" style="background-color:{{bgColor}}" catch:tap="btnTap">{{state}}</view>
                             <view class="manage-btn">详情</view>
                         </view>
                     </view>
+
                 </scroll-view>
-                <scroll-view scroll-y='true' class="weui-tab__content" bindscrolltolower='lower' hidden="{{activeIndex != 1}}"></scroll-view>
+
+                <!-- <scroll-view scroll-y='true' class="weui-tab__content" bindscrolltolower='lower' hidden="{{activeIndex != 1}}"></scroll-view> -->
+            </view>
+            <view class='qr-container'>
+                <image class='qrcode' src='/images/icon/qrcode.png' catchtap='qrTap'></image>
+                <view>邀请新成员</view>
+                <image class='qr-tip' src='/images/icon/qr-tip.png' style="display:{{bottomHidden1}}"></image>
             </view>
         </view>
     </view>

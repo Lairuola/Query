@@ -1,24 +1,155 @@
-<view class='container'>
+<view class='container pad'>
     <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">输入错误,请重新输入</view>
+
+        <view wx:for="{{form.fields}}" wx:for-item="field" class="form-item">
+            <!-- 文本输入框 -->
+            <block wx:if="{{field.widget === 'TextInput'&&field.type!=='IntegerField'}}">
+                <view class="section-input">
+                    <view class='form-name'>{{field.label}}</view>
+                    <input class='form-input' name="{{field.name}}" placeholder-style="margin-left:16rpx;" placeholder="请输入{{field.label}}" />
+                </view>
+            </block>
+            <!-- 数字输入框 -->
+            <block wx:if="{{ field.widget==='TextInput' && field.type==='IntegerField'}}">
+                <view class="section-input">
+                    <view class='form-name'>{{field.label}}</view>
+                    <input class='form-input' name="{{field.name}}" type="number" placeholder-style="margin-left:16rpx;" placeholder="请输入{{field.label}}" />
+                </view>
+            </block>
+            <!-- 多行文本 -->
+            <block wx:if="{{field.widget==='Textarea'}}">
+                <view class="section-pick">
+                    <text class="pick-name">{{field.label}}</text>
+                    <textarea class="textarea-wrp" name="{{field.name}}" bindblur="bindTextAreaBlur" />
+                </view>
+            </block>
+            <!-- 单选 -->
+            <block wx:if="{{field.widget==='RadioSelect'}}">
+                <view class="section-radio">
+                    <view class="radio-name">{{field.label}}</view>
+                    <radio-group name="{{field.name}}" class="radio-group">
+                        <label wx:for="{{field.option}}" wx:key="value">
+                            <radio value="{{item.value}}" checked="{{item.checked}}" /> {{item.label}}
+                        </label>
+                    </radio-group>
+                </view>
+            </block>
+            <!-- 多选 -->
+            <block wx:if="{{field.widget==='CheckboxSelectMultiple'}}">
+                <view class="section-checkbox">
+                    <view class="checkbox-name">{{field.label}}</view>
+                    <checkbox-group name="checkbox" class="checkbox-group">
+                        <label wx:for="{{field.option}}" wx:key="value">
+                            <checkbox name="{{field.name}}" value="{{item.value}}" checked="{{item.checked}}" />{{item.label}}
+                        </label>
+                    </checkbox-group>
+                </view>
+            </block>
+            <!-- 下拉单选 -->
+            <block wx:if="{{field.widget === 'Select'}}">
+                <view class="section-pick">
+                    <picker bindchange="bindPickerChange" range="{{field.select}}" value="{{field.index}}" id="{{'field'+index}}">
+                        <view class="picker">
+                            <text class='pick-name'>{{field.label}}</text>
+                            <text class="pick-select">{{field.select[formdata['field'+index]?formdata['field'+index]:field.index]}}</text>
+                        </view>
+                    </picker>
+                </view>
+            </block>
+            <!-- 图片上传 -->
+            <block wx:if="{{field.widget === 'Upload'}}">
+                <view class="section-pick">
+                    <text class="pick-name">图片上传</text>
+                    <view class="weui-uploader__bd">
+                        <view class="weui-uploader__files" id="uploaderFiles">
+                            <block wx:for-items="{{files}}" wx:key="{{index}}">
+                                <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                                </view>
+                            </block>
+                        </view>
+                        <view class="weui-uploader__input-box" style='margin-left:20rpx;'>
+                            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+            <!-- 日期 -->
+            <block wx:if="{{field.widget === 'Date'}}">
+            <view class="section-pick">
+                <picker mode="date" value="{{field.date}}" bindchange="bindDateChange" id="{{'field'+date}}">
+                    <view class="picker">
+                        <text class='pick-name'>{{field.label}}</text>
+                        <text class="date-select">{{formdata['field'+date]?formdata['field'+date]:field.date}}</text>
+                    </view>
+                </picker>
+             </view>
+             </block>
+            <!-- 日期时间 -->
+            <block wx:if="{{field.widget === 'Datetime'}}">
+                <view class="section-pick">
+                    <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+                        <text class='pick-name'>{{field.label}}</text>
+                        <view class="picker">
+                            <text class="date-select">{{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}</text>
+                        </view>
+                    </picker>
+                </view>
+            </block>
+        </view>
+        <!-- 地址 -->
         <view class="section-input">
+            <view class='form-name'>地址</view>
+            <!-- <input class='form-input' name="input" placeholder="渝北区龙山街道二十二号" placeholder-style="text-align:center" disabled/> -->
+            <view class='adress'>
+                <image class='adress-pic' src='/images/icon/adress.png'></image>
+                <text>渝北区山茶路某某小区</text>
+            </view>
+        </view>
+
+
+        <!-- 提交按钮 -->
+        <view class="btn-area">
+            <button class="submit-btn" formType="submit">立即提交</button>
+        </view>
+
+        <!-- <view class="section-input">
             <view class='form-name'>输入框</view>
             <input class='form-input' name="input" placeholder="请输入您的姓名" />
         </view>
         <view class="section-radio">
             <view class="radio-name">单选框</view>
-            <radio-group name="radio-group">
-                <label><radio value="radio1"/>radio1</label>
-                <label><radio value="radio2"/>radio2</label>
+            <radio-group name="radio-group" class="radio-group">
+                <label class='label1'>
+                    <radio value="radio1" /> 单选1
+                </label>
+                <label class='label1'>
+                    <radio value="radio2" /> 单选2
+                </label>
+                <label class='label1'>
+                    <radio value="radio2" /> 单选3
+                </label>
             </radio-group>
         </view>
         <view class="section-checkbox">
             <view class="checkbox-name">复选框</view>
-            <checkbox-group name="checkbox" style="width:62%;padding-left:27%;">
-                <label><checkbox value="checkbox1"/>选项1</label>
-                <label><checkbox value="checkbox2"/>选项2</label>
-                <label><checkbox value="checkbox3"/>选项3</label>
-                <label><checkbox value="checkbox4"/>选项4</label>
-                <label><checkbox value="checkbox5"/>选项5</label>
+            <checkbox-group name="checkbox" class="checkbox-group">
+                <label>
+                    <checkbox value="checkbox1" /> 选项1
+                </label>
+                <label>
+                    <checkbox value="checkbox2" /> 选项2
+                </label>
+                <label>
+                    <checkbox value="checkbox3" /> 选项3
+                </label>
+                <label>
+                    <checkbox value="checkbox4" /> 选项4
+                </label>
+                <label>
+                    <checkbox value="checkbox5" /> 选项5
+                </label>
             </checkbox-group>
         </view>
         <view class="section-pick">
@@ -26,14 +157,6 @@
                 <view class="picker">
                     <text class='pick-name'>单个选择器</text>
                     <text class="pick-select">{{array[index]}}</text>
-                </view>
-            </picker>
-        </view>
-        <view class="section-pick">
-            <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
-                <view class="picker">
-                    <text class='pick-name'>多个选择器</text>
-                    <text class="mulpick-select">{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}</text>
                 </view>
             </picker>
         </view>
@@ -48,16 +171,39 @@
         <view class="section-pick">
             <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
                 <view class="picker">
-                <text class='pick-name'>城市选择器</text>
-                <text class="city-select">{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+                    <text class='pick-name'>城市选择器</text>
+                    <text class="city-select">{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
                 </view>
             </picker>
         </view>
         <view class="section-pick">
             <text class="pick-name">文本框</text>
-            <view class="textarea-wrp">
-            <textarea bindblur="bindTextAreaBlur" auto-height />
+            <textarea class="textarea-wrp" bindblur="bindTextAreaBlur" />
+        </view>
+        <view class="section-pick">
+            <text class="pick-name">图片上传</text>
+            <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                    <block wx:for-items="{{files}}" wx:key="{{index}}">
+                        <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                            <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                        </view>
+                    </block>
+                </view>
+                <view class="weui-uploader__input-box">
+                    <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                </view>
             </view>
         </view>
+        <view class="section-pick">
+            <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+                <text class='pick-name'>日期选择器</text>
+                <view class="picker">
+                    <text class="date-select">{{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}</text>
+                </view>
+            </picker>
+        </view> -->
+
+
     </form>
 </view>
